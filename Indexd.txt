@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Hazard - Escape From Tarkov</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://od.lk/s/NjdfMzc0MzYwNDZf/DALLE_2024-05-21_10.42.36_-_A_detailed_scene_from_the_game_Escape_from_Tarkov_showing_a_player_exit_camping_near_an_extraction_point._The_environment_is_a_dense_dark_forest_wit.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #2c3e50; /* Fallback color */
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+            transition: background-position 0.1s;
+        }
+        header {
+            background-color: rgba(44, 62, 80, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+        .tab-content {
+            display: none;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Added for readability */
+            border-radius: 8px;
+            margin: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .videos iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: rgba(44, 62, 80, 0.8);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (min-width: 600px) {
+            .videos iframe {
+                height: 450px;
+            }
+        }
+        marquee {
+            font-size: 1em;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 0;
+            width: 100%;
+            display: block;
+        }
+        .controls {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .controls button, .controls input {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function openTab(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("defaultOpen").click();
+            var audio = document.getElementById('background-audio');
+            audio.pause(); // Ensure the audio is paused initially
+            document.getElementById('play-pause').textContent = 'Play';
+        });
+
+        document.addEventListener("mousemove", function(e) {
+            var x = (e.clientX / window.innerWidth - 0.5) * 20;
+            var y = (e.clientY / window.innerHeight - 0.5) * 20;
+            document.body.style.backgroundPosition = x + 'px ' + y + 'px';
+        });
+
+        function togglePlayPause() {
+            var audio = document.getElementById('background-audio');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('play-pause').textContent = 'Pause';
+            } else {
+                audio.pause();
+                document.getElementById('play-pause').textContent = 'Play';
+            }
+        }
+
+        function setVolume() {
+            var audio = document.getElementById('background-audio');
+            var volume = document.getElementById('volume-control').value;
+            audio.volume = volume;
+        }
+    </script>
+</head>
+<body>
+    <marquee>
+        RustyBongos- seriously just ducking ban them, pussiest move ever invented, straight out of the call of duty handbook, if your not moving for 5minutes it should instant kick and hardware ban ya
+    </marquee>
+    <header>
+        <h1>Hidden Hazard - Escape From Tarkov</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" id="defaultOpen" class="active" onclick="openTab(event, 'videos')">Videos</a>
+        <a href="javascript:void(0)" onclick="openTab(event, 'socials')">Socials</a>
+        <a href="javascript:void(0)" onclick="openTab(event, 'whatwedohere')">What we do here</a>
+    </nav>
+    <section id="videos" class="tab-content">
+        <h2>Videos</h2>
+        <p>Check out some of my latest videos:</p>
+        <iframe src="https://www.youtube.com/embed/z05z-jK7QN8" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/27N9oDjmmtg" allowfullscreen></iframe>
+    </section>
+    <section id="socials" class="tab-content">
+        <h2>Socials</h2>
+        <p>Come check me out:</p>
+        <ul>
+            <li><a href="https://twitter.com/yourhandle">Twitter</a></li>
+            <li><a href="https://www.youtube.com/@RatStrats1">YouTube</a></li>
+        </ul>
+    </section>
+    <section id="whatwedohere" class="tab-content">
+        <h2>What we do here</h2>
+        <p>We focus on providing the best Escape From Tarkov strategies, tips, and entertainment. Whether you're a new player or a seasoned veteran, you'll find valuable content to improve your gameplay and enjoy the experience.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Hidden Hazard - Escape From Tarkov</p>
+    </footer>
+    <audio id="background-audio" autoplay loop>
+        <source src="https://od.lk/s/NjdfMzc0MzYwMzhf/EFT%20Parody%20Song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+        <button id="play-pause" onclick="togglePlayPause()">Play</button>
+        <label for="volume-control">Volume:</label>
+        <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1" oninput="setVolume()">
+    </div>
+</body>
+</html>
